@@ -1,0 +1,102 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    // https://github.com/adoxa/ansicon/downloads
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "RunIPS",
+            "type": "shell",
+            "command": "c:\\ip-symcon\\ips.exe",
+            "options": {
+                "env": {
+                    "XDEBUG_CONFIG": "idekey=session_name"
+                },
+                "shell": {
+                    "executable": "ansicon.exe",
+                }
+            },
+            "args": [
+                "\/noservice"
+            ],
+            "group": "none",
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated"
+            },
+            "isBackground": true
+        },
+        {
+            "label": "CS-Fixer (check)",
+            "type": "shell",
+            "command": "${config:php-cs-fixer.executablePath}",
+            "args": [
+                "${config:php-cs-fixer.executablePathWindows}",
+                "fix",
+                "--config=.style/.php_cs",
+                "-v",
+                "--allow-risky=yes",
+                "--path-mode=intersection",
+                "--using-cache=false",
+                "--dry-run",
+                "."
+            ],
+            "group": "test",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "isBackground": false
+        },
+        {
+            "label": "CS-Fixer (fix)",
+            "type": "shell",
+            "command": "${config:php-cs-fixer.executablePath}",
+            "args": [
+                "${config:php-cs-fixer.executablePathWindows}",
+                "fix",
+                "--config=.style/.php_cs",
+                "-v",
+                "--allow-risky=yes",
+                "--path-mode=intersection",
+                "--using-cache=false",
+                "."
+            ],
+            "group": "test",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "isBackground": false
+        },
+        {
+            "label": "JSON-Fixer (fix)",
+            "type": "shell",
+            "command": "${config:php-cs-fixer.executablePath}",
+            "args": [
+                ".style/json-check.php",
+                "fix"
+            ],
+            "group": "test",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "isBackground": false
+        },
+        {
+            "label": "JSON-Fixer (check)",
+            "type": "shell",
+            "command": "${config:php-cs-fixer.executablePath}",
+            "args": [
+                ".style/json-check.php"
+            ],
+            "group": "test",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "isBackground": false
+        }
+    ]
+}
