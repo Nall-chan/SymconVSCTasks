@@ -33,11 +33,11 @@
             "args": [
                 "${config:php-cs-fixer.executablePathWindows}",
                 "fix",
-                "--config=.style/.php_cs",
+                "--config=.style/.php-cs-fixer.php",
                 "-v",
                 "--allow-risky=yes",
                 "--path-mode=intersection",
-                "--using-cache=false",
+                "--using-cache=no",
                 "--dry-run",
                 "."
             ],
@@ -55,11 +55,11 @@
             "args": [
                 "${config:php-cs-fixer.executablePathWindows}",
                 "fix",
-                "--config=.style/.php_cs",
+                "--config=.style/.php-cs-fixer.php",
                 "-v",
                 "--allow-risky=yes",
                 "--path-mode=intersection",
-                "--using-cache=false",
+                "--using-cache=no",
                 "."
             ],
             "group": "test",
