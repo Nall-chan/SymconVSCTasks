@@ -29,9 +29,9 @@
         {
             "label": "CS-Fixer (check)",
             "type": "shell",
-            "command": "${config:php-cs-fixer.executablePath}",
+            "command": "C:\\PHP8\\php.exe",
             "args": [
-                "${config:php-cs-fixer.executablePathWindows}",
+                "C:\\PHP8\\php-cs-fixer.phar",
                 "fix",
                 "--config=.style/.php-cs-fixer.php",
                 "-v",
@@ -51,9 +51,9 @@
         {
             "label": "CS-Fixer (fix)",
             "type": "shell",
-            "command": "${config:php-cs-fixer.executablePath}",
+            "command": "C:\\PHP8\\php.exe",
             "args": [
-                "${config:php-cs-fixer.executablePathWindows}",
+                "C:\\PHP8\\php-cs-fixer.phar",
                 "fix",
                 "--config=.style/.php-cs-fixer.php",
                 "-v",
