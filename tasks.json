@@ -29,9 +29,9 @@
         {
             "label": "CS-Fixer (check)",
             "type": "shell",
-            "command": "${config:php-cs-fixer.executablePath}",
+            "command": "C:\\PHP\\php.exe",
             "args": [
-                "${config:php-cs-fixer.executablePathWindows}",
+                "C:\\PHP\\php-cs-fixer.phar",
                 "fix",
                 "--config=.style/.php-cs-fixer.php",
                 "-v",
@@ -51,9 +51,9 @@
         {
             "label": "CS-Fixer (fix)",
             "type": "shell",
-            "command": "${config:php-cs-fixer.executablePath}",
+            "command": "C:\\PHP\\php.exe",
             "args": [
-                "${config:php-cs-fixer.executablePathWindows}",
+                "C:\\PHP\\php-cs-fixer.phar",
                 "fix",
                 "--config=.style/.php-cs-fixer.php",
                 "-v",
@@ -72,7 +72,7 @@
         {
             "label": "JSON-Fixer (fix)",
             "type": "shell",
-            "command": "${config:php-cs-fixer.executablePath}",
+            "command": "C:\\PHP\\php.exe",
             "args": [
                 ".style/json-check.php",
                 "fix"
@@ -87,7 +87,7 @@
         {
             "label": "JSON-Fixer (check)",
             "type": "shell",
-            "command": "${config:php-cs-fixer.executablePath}",
+            "command": "C:\\PHP\\php.exe",
             "args": [
                 ".style/json-check.php"
             ],
