@@ -72,7 +72,7 @@
         {
             "label": "JSON-Fixer (fix)",
             "type": "shell",
-            "command": "${config:php-cs-fixer.executablePath}",
+            "command": "${config:php.executablePath}",
             "args": [
                 ".style/json-check.php",
                 "fix"
@@ -87,7 +87,7 @@
         {
             "label": "JSON-Fixer (check)",
             "type": "shell",
-            "command": "${config:php-cs-fixer.executablePath}",
+            "command": "${config:php.executablePath}",
             "args": [
                 ".style/json-check.php"
             ],
