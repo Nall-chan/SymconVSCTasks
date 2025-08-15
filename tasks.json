@@ -51,7 +51,7 @@
         {
             "label": "CS-Fixer (fix)",
             "type": "shell",
-            "command": "C:\\PHP8\\php.exe",
+            "command": "${config:php.executablePath}",
             "args": [
                 "C:\\PHP8\\php-cs-fixer.phar",
                 "fix",
@@ -87,9 +87,26 @@
         {
             "label": "JSON-Fixer (check)",
             "type": "shell",
-            "command": "${config:php.executablePath}",
+            "command": "C:\\PHP8\\php.exe",
             "args": [
                 ".style/json-check.php"
+            ],
+            "group": "test",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "isBackground": false
+        },
+        {
+            "label": "Run phpunit equal to github",
+            "type": "shell",
+            "command": "${config:php.executablePath}",
+            "args": [
+                "C:\\php8\\phpunit-11.0.0.phar",
+                "tests",
+                "--configuration",
+                "tests/phpunit.xml"
             ],
             "group": "test",
             "presentation": {
